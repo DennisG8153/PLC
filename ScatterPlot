@@ -1,0 +1,19 @@
+import streamlit as st
+import matplotlib.pyplot as plt
+
+st.title("Sentiment Analysis")
+
+
+fig, plot = plt.subplots(figsize=(7, 5))
+
+
+plot.set_xlim(0, 100)
+plot.set_ylim(0, 100)
+
+
+plot.set_title('Sentiment Analysis')
+plot.set_xlabel('X Axis')
+plot.set_ylabel('Y Axis')
+
+
+st.pyplot(fig)
