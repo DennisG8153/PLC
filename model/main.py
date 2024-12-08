@@ -23,12 +23,12 @@ if __name__ == "__main__":
     ### -------------------------------------- 1 -------------------------------------- ###
     print("checkpoint 1")
     PLC_path = os.path.dirname(current_directory) # PLC
-    raw_data_folder_path = os.path.join(PLC_path, "data/raw")
+    raw_data_folder_path = os.path.join(PLC_path, "data","raw")
     all_companies_data = load_all_data(raw_data_folder_path)
 
     ### -------------------------------------- 2 -------------------------------------- ###
     print("checkpoint 2")
-    model_path = os.path.join(current_directory, "saved_models/model_1.keras")
+    model_path = os.path.join(current_directory, "saved_models","model_1.keras")
     loaded_nn = ModelWork(model_path)
 
     ### -------------------------------------- 3 -------------------------------------- ###

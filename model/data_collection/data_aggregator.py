@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # path to go up to PLC then back down to data
     # DO NOT CHANGE FILE STRUCTURE!!!!!!!!!!!
     PLC_path = os.path.dirname(os.path.dirname(os.path.dirname(current_file)))
-    raw_data_folder_path = os.path.join(PLC_path, "data/raw")
+    raw_data_folder_path = os.path.join(PLC_path, "data","raw")
 
     for ticker in tickers:
         # print statement that states it is fetching data for each ticker 
