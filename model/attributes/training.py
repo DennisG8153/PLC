@@ -16,8 +16,6 @@ def lstm_prediction_data(data: pd.DataFrame, time_steps: int):
 
 
 def train_model(model_wrapper: ModelWork, data: pd.DataFrame):
-    #
-
     keras_model = model_wrapper.model # accesses model property (keras model) of ModelWork
     data_used_to_predict, data_to_predict = lstm_prediction_data(data, time_steps = model_wrapper.timestep)
     # Add early stopping to prevent overfitting
