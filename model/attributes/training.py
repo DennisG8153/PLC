@@ -9,7 +9,7 @@ def lstm_prediction_data(data: pd.DataFrame, time_steps: int):
     ####################################################
 
     input_data, target_prediction_data = [], []
-    for i in range(len(data) - time_steps):
+    for i in range(0,len(data) - time_steps, time_steps):
         input_data.append(data.iloc[i:(i + time_steps),:]) # training data is 10 by 5
         target_prediction_data.append(data.iloc[i + time_steps, 3]) # 3 is "close" column
     return np.array(input_data), np.array(target_prediction_data)
