@@ -25,6 +25,9 @@ if __name__ == "__main__":
     raw_data_folder_path = os.path.join(PLC_path, "data","raw")
     all_companies_data = load_all_data_normalized(raw_data_folder_path)
 
+    print(all_companies_data[0]["train_set"])
+    print(all_companies_data[0]["test_set"])
+
     ### ----------------------------------------- 2 ----------------------------------------- ###
     print("checkpoint 2")
     model_path = os.path.join(current_directory, "saved_models","model_1.keras")

@@ -21,7 +21,7 @@ class Normalizer:
         ## its the difference between knowing the min & max of only the last column passed in (fit)
         ## vs 
         ## the difference between the min & max of all the columns (partial fit)
-        return
+    
     
     def normalize_price_column(self, stock_data_column: pd.DataFrame): 
         # transforms 1 price column 
@@ -54,7 +54,7 @@ class Normalizer:
         # loop through all columns and train on each on of them 1 at a time
         # this ensures only one column is transformed at once
         for col_name in ["Open","High","Low","Close"]:
-            stock_data[[col_name]] = self.train_price_column(stock_data[[col_name]].values)
+            self.train_price_column(stock_data[[col_name]].values)
 
         for col_name in ["Open","High","Low","Close"]:
             stock_data[[col_name]] = self.normalize_price_column(stock_data[[col_name]].values)
@@ -88,6 +88,7 @@ def read_data_file(filename: str):
         parse_dates=True,
         date_format='%Y-%m-%d'
     )
+    data_read_from_file.dropna(inplace=True)
     return data_read_from_file
 
 
