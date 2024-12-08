@@ -14,8 +14,10 @@ def predict_model(model_wrapper: ModelWork, data_to_predict: pd.DataFrame):
     predicted_prices = keras_model.predict(prediction_input_data)
     
     #predicted_prices = scaler.inverse_transform(predicted_prices_scaled)
-
-    error = correct_prediction.compare(predicted_prices)
+    df_correct_prediction = pd.DataFrame(correct_prediction)
+    df_predicted_prices = pd.DataFrame(predicted_prices)
+    
+    error = df_correct_prediction.compare(df_predicted_prices)
     print(error, error.std())
 
     return
