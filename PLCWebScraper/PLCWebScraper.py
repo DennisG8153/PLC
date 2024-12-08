@@ -2,7 +2,6 @@ import requests                                                      #Scrapes HT
 from bs4 import BeautifulSoup                                        #Removes HTML syntax and leaves plain text
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer #Preforms sentiment analysis on text
 import pandas as pd                                                  #Data manipulation library
-#import streamlit as st                                              #TODO where is streamlit, get this installed
 
 #headers={"accept-language": "en-US,en;q=0.9", "accept-encoding": "gzip, deflate, br", "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"}
 headers={"accept-language":"en-US,en;q=0.9", "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"}
@@ -38,5 +37,3 @@ with open('total_sent.txt', 'w') as total_sent: #Opens 'total_sent.txt' to write
 
         total_sent.write(avg_sent)                                                                          #Writes averages to total_sent file
         print(avg_sent)                                                                                     #prints averages, can be commented out
-
-    
