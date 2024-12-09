@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
             # Make predictions
             _, predicted_prices = predict_model_test(loaded_nn, loaded_data["normalized_test_set"])
-            _, correct_prediction = lstm_prediction_data(loaded_data["raw_test_set"], loaded_nn.days_to_train_on, loaded_nn.prediction_start_date, loaded_nn.days_to_predict)
+            _, correct_prediction = lstm_prediction_data(loaded_data["raw_test_set"], days_to_train_on, prediction_start_date, days_to_predict)
 
             # Debug: check lengths of test set and predictions
             # print(f"Company: {company_name}, Test Set Length: {len(dates)}, Predictions Length: {len(correct_prediction)}")
@@ -89,13 +89,13 @@ if __name__ == "__main__":
 
             # Write the comparison table
             for i in range(0, len(restored_prices), 10):
-                current_date = dates[i+loaded_nn.prediction_start_date]
+                current_date = dates[i+prediction_start_date]
                 f.write(f"{current_date.strftime('%Y-%m-%d'):<12} {restored_prices[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
 
             # Handle the final date
             current_date = pd.Timestamp.today().date()
-            future_date = current_date + timedelta(days = 30)
+            future_date = current_date + timedelta(days = (4*days_to_predict))
             business_date_range = pd.bdate_range(current_date, future_date)
-            for i in range(0,14):
+            for i in range(0,days_to_predict):
                 f.write(f"{business_date_range[i].strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions [-(14-i)][0]:<10.2f}\n")
             f.write("\n")  # Separate companies with a newline for better readability
