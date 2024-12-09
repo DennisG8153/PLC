@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
             # write the comparison table to the file, printing every 10th day based on date intervals
             for i in range(0, len(restored_prices), 10):
-                f.write(f"{dates[i].strftime('%Y-%m-%d'):<12} {restored_prices[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
+                f.write(f"{(dates[i] + timedelta(days = loaded_nn.future)).strftime('%Y-%m-%d'):<12} {restored_prices[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
             f.write(f"{(dates[len(dates)-1] + timedelta(days = loaded_nn.future)).strftime('%Y-%m-%d'):<12} {restored_predictions[-1][0]:<10.2f}\n")
 
             f.write("\n")  # Separate companies with a newline for better readability
