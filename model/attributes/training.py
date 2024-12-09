@@ -11,7 +11,7 @@ def lstm_prediction_data(data: pd.DataFrame, days_to_train_on, prediction_start_
     input_data, target_prediction_data = [], []
 
     for current_day in range(days_to_train_on, len(data) - (prediction_start_date + days_to_predict)): 
-        input_data.append(data.iloc[(current_day - days_to_train_on): current_day, : ]) # ###
+        input_data.append(data.iloc[(current_day - days_to_train_on): current_day, : ])
 
         target_prediction_data.append(data.iloc[(current_day + prediction_start_date): current_day + prediction_start_date + days_to_predict, 3]) # 3 is "close" column
     return np.array(input_data), np.array(target_prediction_data)

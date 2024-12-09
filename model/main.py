@@ -48,22 +48,22 @@ if __name__ == "__main__":
     print("checkpoint 2")
     model_file_name  = f"model_{days_to_train_on}_{prediction_start_date}_{days_to_predict}.keras"
     model_path = os.path.join(current_directory, "saved_models", model_file_name)
-    loaded_nn = ModelWork(model_path)
+    loaded_nn = ModelWork(model_path, days_to_train_on, prediction_start_date, days_to_predict)
 
-    # ### ----------------------------------------- 3 ----------------------------------------- ###
-    # print("checkpoint 3")
-    # for loaded_data in all_companies_data: 
-    #      train_model(loaded_nn, loaded_data["normalized_train_set"])
+    ### ----------------------------------------- 3 ----------------------------------------- ###
+    print("checkpoint 3")
+    for loaded_data in all_companies_data: 
+         train_model(loaded_nn, loaded_data["normalized_train_set"])
 
-    # ### ----------------------------------------- 4 ----------------------------------------- ###
-    # print("checkpoint 4")
-    # loaded_nn.save_model()
+    ### ----------------------------------------- 4 ----------------------------------------- ###
+    print("checkpoint 4")
+    loaded_nn.save_model()
 
     ### ----------------------------------------- 5 ----------------------------------------- ###
     print("checkpoint 5")
     output_file = f"output_for_{days_to_train_on}_{prediction_start_date}_{days_to_predict}.txt"
     output_file_path = os.path.join(current_directory, "output_files", output_file)
-    with open(output_file, "w") as f:
+    with open(output_file_path, "w") as f:
         for loaded_data in all_companies_data:
             company_name = loaded_data["ticker"]
             f.write(f"Company: {company_name}\n")
@@ -75,13 +75,13 @@ if __name__ == "__main__":
 
             # Make predictions
             _, predicted_prices = predict_model_test(loaded_nn, loaded_data["normalized_test_set"])
-            _, correct_prediction = lstm_prediction_data(loaded_data["raw_test_set"])
+            _, correct_prediction = lstm_prediction_data(loaded_data["raw_test_set"], loaded_nn.days_to_train_on, loaded_nn.prediction_start_date, loaded_nn.days_to_predict)
 
             # Debug: check lengths of test set and predictions
-            print(f"Company: {company_name}, Test Set Length: {len(dates)}, Predictions Length: {len(correct_prediction)}")
+            # print(f"Company: {company_name}, Test Set Length: {len(dates)}, Predictions Length: {len(correct_prediction)}")
 
             # Restore prices to their original scale
-            restored_prices = loaded_data["normalizer"].restore_price_column(correct_prediction.values)
+            restored_prices = loaded_data["normalizer"].restore_price_column(pd.DataFrame(correct_prediction))
             restored_predictions = loaded_data["normalizer"].restore_price_column(predicted_prices.values)
 
             # Debug: print a preview of the restored prices and predictions
@@ -91,10 +91,11 @@ if __name__ == "__main__":
             for i in range(0, len(restored_prices), 10):
                 current_date = dates[i+loaded_nn.prediction_start_date]
                 f.write(f"{current_date.strftime('%Y-%m-%d'):<12} {restored_prices[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
-                
 
             # Handle the final date
-            final_date = dates[len(dates) - 1] + timedelta(days=loaded_nn.prediction_start_date)
-            f.write(f"{final_date.strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions[-1]}\n")
-
+            current_date = pd.Timestamp.today().date()
+            future_date = current_date + timedelta(days = 30)
+            business_date_range = pd.bdate_range(current_date, future_date)
+            for i in range(0,14):
+                f.write(f"{business_date_range[i].strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions [-(14-i)][0]:<10.2f}\n")
             f.write("\n")  # Separate companies with a newline for better readability
