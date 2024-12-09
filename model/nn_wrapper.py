@@ -8,6 +8,7 @@ class ModelWork:
 
     def __init__(self, model_path):
         self.timestep = 10
+        self.future = 14
         self.file_path = model_path
         if os.path.exists(model_path):
             self.model = self.get_model() # self.model is type: "keras model" 

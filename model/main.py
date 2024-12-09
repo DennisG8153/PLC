@@ -1,10 +1,11 @@
+from datetime import timedelta
 import os
 import pandas as pd
 os.environ["KERAS_BACKEND"] = "tensorflow" 
 from nn_wrapper import ModelWork
 from data_collection.data_cleaner import load_all_data_normalized
 from attributes.training import train_model
-from attributes.predicting import predict_model 
+from attributes.predicting import predict_model_test 
 
 # 1. load in saved data from raw folder
 # 2. make/load neural network (construct ModelWork)
@@ -55,7 +56,7 @@ if __name__ == "__main__":
             print(f"Company: {company_name}, Dates: {dates[:5]}...")  # print the first 5 dates for inspection
 
             # make predictions
-            correct_prediction, predicted_prices = predict_model(loaded_nn, loaded_data["test_set"])
+            correct_prediction, predicted_prices = predict_model_test(loaded_nn, loaded_data["test_set"])
 
             # print lengths of actual data and predicted data for debugging
             print(f"Company: {company_name}, Test Set Length: {len(dates)}, Predictions Length: {len(correct_prediction)}")
@@ -70,5 +71,6 @@ if __name__ == "__main__":
             # write the comparison table to the file, printing every 10th day based on date intervals
             for i in range(0, len(restored_prices), 10):
                 f.write(f"{dates[i].strftime('%Y-%m-%d'):<12} {restored_prices[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
+            f.write(f"{(dates[len(dates)-1] + timedelta(days = loaded_nn.future)).strftime('%Y-%m-%d'):<12} {restored_predictions[-1][0]:<10.2f}\n")
 
             f.write("\n")  # Separate companies with a newline for better readability
