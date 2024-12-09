@@ -24,7 +24,7 @@ def predict_model_test(model_wrapper: ModelWork, data_to_predict: pd.DataFrame):
     prediction_input_data, correct_prediction = lstm_prediction_data(data_to_predict, model_wrapper.timestep, model_wrapper.future)
 
     # Extract the last relevant portion of the data and stack it correctly
-    additional_data = data_to_predict.iloc[(len(data_to_predict) - model_wrapper.timestep - 1):len(data_to_predict), :].to_numpy()
+    additional_data = data_to_predict.iloc[(len(data_to_predict) - model_wrapper.timestep):len(data_to_predict), :].to_numpy()
 
     # Ensure prediction_input_data and additional_data have the correct dimensions
     prediction_input_data = np.concatenate([prediction_input_data, np.array([additional_data])])

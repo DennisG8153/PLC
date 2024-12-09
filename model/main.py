@@ -32,14 +32,14 @@ if __name__ == "__main__":
     model_path = os.path.join(current_directory, "saved_models","model_1.keras")
     loaded_nn = ModelWork(model_path)
 
-    ### ----------------------------------------- 3 ----------------------------------------- ###
-    print("checkpoint 3")
-    for loaded_data in all_companies_data: 
-         train_model(loaded_nn, loaded_data["train_set"])
+    # ### ----------------------------------------- 3 ----------------------------------------- ###
+    # print("checkpoint 3")
+    # for loaded_data in all_companies_data: 
+    #      train_model(loaded_nn, loaded_data["train_set"])
 
-    ### ----------------------------------------- 4 ----------------------------------------- ###
-    print("checkpoint 4")
-    loaded_nn.save_model()
+    # ### ----------------------------------------- 4 ----------------------------------------- ###
+    # print("checkpoint 4")
+    # loaded_nn.save_model()
 
     ### ----------------------------------------- 5 ----------------------------------------- ###
     print("checkpoint 5")
