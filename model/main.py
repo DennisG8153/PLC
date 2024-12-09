@@ -81,7 +81,7 @@ if __name__ == "__main__":
             # print(f"Company: {company_name}, Test Set Length: {len(dates)}, Predictions Length: {len(correct_prediction)}")
 
             # Restore prices to their original scale
-            restored_prices = loaded_data["normalizer"].restore_price_column(pd.DataFrame(correct_prediction))
+            restored_prices = pd.DataFrame(correct_prediction)
             restored_predictions = loaded_data["normalizer"].restore_price_column(predicted_prices.values)
 
             # Debug: print a preview of the restored prices and predictions
