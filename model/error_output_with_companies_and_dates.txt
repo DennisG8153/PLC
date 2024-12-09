@@ -1,6 +1,6 @@
 Company: DE
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   439.63     387.90    
 2023-01-05   420.60     425.91    
 2023-01-23   415.33     412.14    
@@ -49,11 +49,11 @@ dates        self       other
 2024-10-09   406.04     427.51    
 2024-10-23   393.75     432.17    
 2024-11-06   461.04     428.18    
-2024-12-17   484.13    
+2024-12-17   N/A        484.13    
 
 Company: BA
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   214.13     192.67    
 2023-01-05   209.67     211.57    
 2023-01-23   215.65     213.37    
@@ -102,11 +102,11 @@ dates        self       other
 2024-10-09   152.98     158.96    
 2024-10-23   145.17     159.57    
 2024-11-06   150.76     161.98    
-2024-12-17   154.62    
+2024-12-17   N/A        154.62    
 
 Company: CL
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   77.85      73.33     
 2023-01-05   72.88      72.47     
 2023-01-23   73.77      74.94     
@@ -155,11 +155,11 @@ dates        self       other
 2024-10-09   94.72      99.98     
 2024-10-23   91.50      94.52     
 2024-11-06   96.58      90.49     
-2024-12-17   94.04     
+2024-12-17   N/A        94.04     
 
 Company: GOOGL
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   92.12      91.32     
 2023-01-05   96.94      92.31     
 2023-01-23   94.61      100.24    
@@ -208,11 +208,11 @@ dates        self       other
 2024-10-09   169.68     173.95    
 2024-10-23   181.62     174.93    
 2024-11-06   169.12     177.14    
-2024-12-17   176.62    
+2024-12-17   N/A        176.62    
 
 Company: ROP
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   450.98     419.22    
 2023-01-05   423.48     466.60    
 2023-01-23   429.68     424.80    
@@ -261,11 +261,11 @@ dates        self       other
 2024-10-09   548.81     470.11    
 2024-10-23   564.77     476.71    
 2024-11-06   561.89     494.51    
-2024-12-17   475.71    
+2024-12-17   N/A        475.71    
 
 Company: ORCL
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   89.20      81.17     
 2023-01-05   87.35      88.14     
 2023-01-23   89.42      90.97     
@@ -314,11 +314,11 @@ dates        self       other
 2024-10-09   173.43     180.80    
 2024-10-23   189.58     192.23    
 2024-11-06   190.37     178.89    
-2024-12-17   153.86    
+2024-12-17   N/A        153.86    
 
 Company: AAPL
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   134.76     140.40    
 2023-01-05   143.00     100.62    
 2023-01-23   153.85     128.68    
@@ -367,11 +367,11 @@ dates        self       other
 2024-10-09   233.67     191.65    
 2024-10-23   224.23     190.95    
 2024-11-06   235.06     189.56    
-2024-12-17   191.66    
+2024-12-17   N/A        191.66    
 
 Company: CARR
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2024-01-09   54.71      57.35     
 2024-01-24   55.00      56.24     
 2024-02-08   55.58      55.44     
@@ -394,11 +394,11 @@ dates        self       other
 2024-10-11   72.72      66.03     
 2024-10-25   74.97      63.01     
 2024-11-08   77.37      83.65     
-2024-12-17   71.57     
+2024-12-17   N/A        71.57     
 
 Company: ALGN
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   239.76     201.41    
 2023-01-05   265.82     218.88    
 2023-01-23   325.26     248.94    
@@ -447,11 +447,11 @@ dates        self       other
 2024-10-09   212.78     243.55    
 2024-10-23   219.09     217.99    
 2024-11-06   227.93     216.44    
-2024-12-17   231.89    
+2024-12-17   N/A        231.89    
 
 Company: V
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   223.06     212.73    
 2023-01-05   229.10     217.44    
 2023-01-23   228.88     229.49    
@@ -500,11 +500,11 @@ dates        self       other
 2024-10-09   281.88     286.60    
 2024-10-23   309.85     293.83    
 2024-11-06   311.82     277.88    
-2024-12-17   259.23    
+2024-12-17   N/A        259.23    
 
 Company: HSY
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   226.61     237.39    
 2023-01-05   223.19     224.69    
 2023-01-23   239.91     224.72    
@@ -553,11 +553,11 @@ dates        self       other
 2024-10-09   180.02     192.51    
 2024-10-23   181.50     177.61    
 2024-11-06   173.29     169.49    
-2024-12-17   178.79    
+2024-12-17   N/A        178.79    
 
 Company: MMM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   108.29     105.46    
 2023-01-05   94.13      106.33    
 2023-01-23   96.39      104.73    
@@ -606,11 +606,11 @@ dates        self       other
 2024-10-09   129.27     142.31    
 2024-10-23   130.35     133.73    
 2024-11-06   132.95     130.02    
-2024-12-17   131.94    
+2024-12-17   N/A        131.94    
 
 Company: SPG
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   125.57     117.38    
 2023-01-05   125.95     119.13    
 2023-01-23   125.78     122.39    
@@ -659,11 +659,11 @@ dates        self       other
 2024-10-09   171.98     157.92    
 2024-10-23   178.22     189.09    
 2024-11-06   183.46     168.90    
-2024-12-17   191.39    
+2024-12-17   N/A        191.39    
 
 Company: MA
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   375.52     364.06    
 2023-01-05   371.12     374.98    
 2023-01-23   370.83     373.30    
@@ -712,11 +712,11 @@ dates        self       other
 2024-10-09   506.28     478.76    
 2024-10-23   529.17     423.07    
 2024-11-06   528.48     412.88    
-2024-12-17   427.57    
+2024-12-17   N/A        427.57    
 
 Company: PFE
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   47.85      52.30     
 2023-01-05   43.55      50.90     
 2023-01-23   43.99      46.23     
@@ -765,11 +765,11 @@ dates        self       other
 2024-10-09   28.46      29.48     
 2024-10-23   26.19      29.05     
 2024-11-06   25.77      27.86     
-2024-12-17   25.58     
+2024-12-17   N/A        25.58     
 
 Company: PG
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   150.88     157.44    
 2023-01-05   141.01     158.88    
 2023-01-23   140.07     140.57    
@@ -818,11 +818,11 @@ dates        self       other
 2024-10-09   167.17     154.01    
 2024-10-23   165.84     156.64    
 2024-11-06   179.31     173.99    
-2024-12-17   152.24    
+2024-12-17   N/A        152.24    
 
 Company: ABBV
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   153.60     167.74    
 2023-01-05   145.65     172.51    
 2023-01-23   153.73     133.94    
@@ -871,11 +871,11 @@ dates        self       other
 2024-10-09   189.45     173.31    
 2024-10-23   171.09     183.99    
 2024-11-06   181.14     172.95    
-2024-12-17   190.39    
+2024-12-17   N/A        190.39    
 
 Company: FMC
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   129.97     138.05    
 2023-01-05   130.29     136.52    
 2023-01-23   128.94     134.72    
@@ -924,11 +924,11 @@ dates        self       other
 2024-10-09   60.18      65.73     
 2024-10-23   55.94      64.94     
 2024-11-06   59.97      67.09     
-2024-12-17   59.73     
+2024-12-17   N/A        59.73     
 
 Company: UNH
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   489.57     541.52    
 2023-01-05   485.79     507.62    
 2023-01-23   495.35     425.55    
@@ -977,11 +977,11 @@ dates        self       other
 2024-10-09   562.13     516.79    
 2024-10-23   614.67     493.11    
 2024-11-06   606.79     613.27    
-2024-12-17   505.63    
+2024-12-17   N/A        505.63    
 
 Company: GS
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   374.00     322.38    
 2023-01-05   357.46     363.96    
 2023-01-23   374.02     404.01    
@@ -1030,11 +1030,11 @@ dates        self       other
 2024-10-09   524.28     514.38    
 2024-10-23   592.59     516.77    
 2024-11-06   605.50     534.61    
-2024-12-17   497.18    
+2024-12-17   N/A        497.18    
 
 Company: PAYX
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   120.31     106.78    
 2023-01-05   114.69     126.34    
 2023-01-23   115.51     123.86    
@@ -1083,11 +1083,11 @@ dates        self       other
 2024-10-09   141.87     135.52    
 2024-10-23   148.00     129.21    
 2024-11-06   146.19     130.35    
-2024-12-17   125.46    
+2024-12-17   N/A        125.46    
 
 Company: SBUX
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   107.23     97.91     
 2023-01-05   108.40     113.25    
 2023-01-23   108.52     110.15    
@@ -1136,11 +1136,11 @@ dates        self       other
 2024-10-09   97.39      98.15     
 2024-10-23   98.80      97.04     
 2024-11-06   100.68     94.07     
-2024-12-17   108.87    
+2024-12-17   N/A        108.87    
 
 Company: IBM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   145.89     144.58    
 2023-01-05   135.30     147.47    
 2023-01-23   137.35     146.60    
@@ -1189,11 +1189,11 @@ dates        self       other
 2024-10-09   210.43     217.68    
 2024-10-23   210.86     201.77    
 2024-11-06   228.83     213.84    
-2024-12-17   226.28    
+2024-12-17   N/A        226.28    
 
 Company: MO
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   45.62      47.14     
 2023-01-05   44.50      47.33     
 2023-01-23   47.85      45.95     
@@ -1242,11 +1242,11 @@ dates        self       other
 2024-10-09   49.95      50.88     
 2024-10-23   54.44      50.47     
 2024-11-06   57.59      53.94     
-2024-12-17   58.94     
+2024-12-17   N/A        58.94     
 
 Company: COST
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   485.25     479.80    
 2023-01-05   503.28     477.75    
 2023-01-23   506.45     478.79    
@@ -1295,11 +1295,11 @@ dates        self       other
 2024-10-09   886.99     924.82    
 2024-10-23   932.38     924.23    
 2024-11-06   971.50     965.79    
-2024-12-17   775.55    
+2024-12-17   N/A        775.55    
 
 Company: JNJ
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   173.43     166.29    
 2023-01-05   162.00     166.49    
 2023-01-23   162.75     176.13    
@@ -1348,11 +1348,11 @@ dates        self       other
 2024-10-09   160.09     162.89    
 2024-10-23   152.64     167.92    
 2024-11-06   154.52     159.00    
-2024-12-17   156.27    
+2024-12-17   N/A        156.27    
 
 Company: UPS
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   182.15     178.32    
 2023-01-05   176.97     174.84    
 2023-01-23   187.41     177.97    
@@ -1401,11 +1401,11 @@ dates        self       other
 2024-10-09   134.31     134.90    
 2024-10-23   130.14     133.80    
 2024-11-06   134.96     135.76    
-2024-12-17   133.32    
+2024-12-17   N/A        133.32    
 
 Company: PSA
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   290.87     300.50    
 2023-01-05   298.89     236.75    
 2023-01-23   302.50     315.05    
@@ -1454,11 +1454,11 @@ dates        self       other
 2024-10-09   331.26     345.16    
 2024-10-23   330.24     309.73    
 2024-11-06   350.04     320.59    
-2024-12-17   337.74    
+2024-12-17   N/A        337.74    
 
 Company: EL
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   267.22     243.77    
 2023-01-05   271.21     254.04    
 2023-01-23   255.29     282.67    
@@ -1507,11 +1507,11 @@ dates        self       other
 2024-10-09   88.75      94.10     
 2024-10-23   62.74      88.20     
 2024-11-06   73.18      67.93     
-2024-12-17   76.69     
+2024-12-17   N/A        76.69     
 
 Company: EQIX
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   721.89     669.68    
 2023-01-05   724.86     671.48    
 2023-01-23   738.87     712.86    
@@ -1560,11 +1560,11 @@ dates        self       other
 2024-10-09   905.91     905.86    
 2024-10-23   903.02     940.46    
 2024-11-06   978.26     935.31    
-2024-12-17   815.06    
+2024-12-17   N/A        815.06    
 
 Company: SCHW
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   82.98      83.86     
 2023-01-05   75.50      85.55     
 2023-01-23   80.42      85.94     
@@ -1613,11 +1613,11 @@ dates        self       other
 2024-10-09   71.89      65.25     
 2024-10-23   78.19      73.43     
 2024-11-06   82.25      66.99     
-2024-12-17   82.55     
+2024-12-17   N/A        82.55     
 
 Company: MSFT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   239.23     256.02    
 2023-01-05   242.71     182.34    
 2023-01-23   271.32     227.73    
@@ -1666,11 +1666,11 @@ dates        self       other
 2024-10-09   431.95     420.54    
 2024-10-23   423.03     440.67    
 2024-11-06   427.99     414.07    
-2024-12-17   429.91    
+2024-12-17   N/A        429.91    
 
 Company: CCI
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   150.86     132.07    
 2023-01-05   144.75     145.65    
 2023-01-23   141.74     151.47    
@@ -1719,11 +1719,11 @@ dates        self       other
 2024-10-09   106.61     111.01    
 2024-10-23   102.25     109.19    
 2024-11-06   106.30     108.16    
-2024-12-17   105.90    
+2024-12-17   N/A        105.90    
 
 Company: CAT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   258.46     196.79    
 2023-01-05   261.50     227.89    
 2023-01-23   248.15     271.60    
@@ -1772,11 +1772,11 @@ dates        self       other
 2024-10-09   387.51     337.67    
 2024-10-23   393.01     327.11    
 2024-11-06   407.83     369.41    
-2024-12-17   336.77    
+2024-12-17   N/A        336.77    
 
 Company: AMGN
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   271.73     262.12    
 2023-01-05   251.59     273.93    
 2023-01-23   243.66     258.45    
@@ -1825,11 +1825,11 @@ dates        self       other
 2024-10-09   316.00     342.83    
 2024-10-23   298.84     326.88    
 2024-11-06   280.01     328.82    
-2024-12-17   254.16    
+2024-12-17   N/A        254.16    
 
 Company: MCD
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   268.89     264.59    
 2023-01-05   270.89     282.51    
 2023-01-23   266.20     281.85    
@@ -1878,11 +1878,11 @@ dates        self       other
 2024-10-09   295.00     260.66    
 2024-10-23   298.65     261.80    
 2024-11-06   296.33     281.00    
-2024-12-17   287.34    
+2024-12-17   N/A        287.34    
 
 Company: KO
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   61.43      60.49     
 2023-01-05   60.64      61.93     
 2023-01-23   60.60      58.67     
@@ -1931,11 +1931,11 @@ dates        self       other
 2024-10-09   65.56      63.82     
 2024-10-23   63.20      65.57     
 2024-11-06   64.55      64.87     
-2024-12-17   58.78     
+2024-12-17   N/A        58.78     
 
 Company: KHC
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2023-01-31   39.87      39.90     
 2023-02-14   38.64      40.28     
 2023-02-28   38.04      39.13     
@@ -1981,11 +1981,11 @@ dates        self       other
 2024-10-02   35.64      35.75     
 2024-10-16   33.51      36.14     
 2024-10-30   30.58      36.04     
-2024-12-17   31.70     
+2024-12-17   N/A        31.70     
 
 Company: T
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   19.55      18.16     
 2023-01-05   20.16      19.51     
 2023-01-23   19.26      19.16     
@@ -2034,11 +2034,11 @@ dates        self       other
 2024-10-09   22.18      21.62     
 2024-10-23   22.15      21.21     
 2024-11-06   23.09      22.35     
-2024-12-17   23.25     
+2024-12-17   N/A        23.25     
 
 Company: INTC
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   30.11      28.01     
 2023-01-05   27.95      28.33     
 2023-01-23   28.55      30.64     
@@ -2087,11 +2087,11 @@ dates        self       other
 2024-10-09   22.90      22.87     
 2024-10-23   24.16      22.56     
 2024-11-06   24.05      22.40     
-2024-12-17   23.80     
+2024-12-17   N/A        23.80     
 
 Company: PM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   101.70     102.91    
 2023-01-05   103.83     102.69    
 2023-01-23   103.71     100.96    
@@ -2140,11 +2140,11 @@ dates        self       other
 2024-10-09   131.57     118.77    
 2024-10-23   124.22     135.95    
 2024-11-06   132.28     115.67    
-2024-12-17   114.12    
+2024-12-17   N/A        114.12    
 
 Company: MKC
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   81.10      79.61     
 2023-01-05   74.68      83.43     
 2023-01-23   75.59      78.69     
@@ -2193,11 +2193,11 @@ dates        self       other
 2024-10-09   77.48      80.80     
 2024-10-23   76.59      79.98     
 2024-11-06   77.81      78.96     
-2024-12-17   79.26     
+2024-12-17   N/A        79.26     
 
 Company: DUK
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   104.98     99.15     
 2023-01-05   101.64     107.42    
 2023-01-23   100.04     96.05     
@@ -2246,11 +2246,11 @@ dates        self       other
 2024-10-09   114.41     103.33    
 2024-10-23   111.88     113.99    
 2024-11-06   117.04     107.32    
-2024-12-17   107.70    
+2024-12-17   N/A        107.70    
 
 Company: ABT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   113.51     100.97    
 2023-01-05   109.81     116.63    
 2023-01-23   108.52     107.71    
@@ -2299,11 +2299,11 @@ dates        self       other
 2024-10-09   113.40     115.73    
 2024-10-23   116.44     124.04    
 2024-11-06   117.96     120.20    
-2024-12-17   121.36    
+2024-12-17   N/A        121.36    
 
 Company: ADP
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   245.36     251.54    
 2023-01-05   222.35     243.26    
 2023-01-23   227.36     241.11    
@@ -2352,11 +2352,11 @@ dates        self       other
 2024-10-09   287.95     287.68    
 2024-10-23   307.91     257.01    
 2024-11-06   307.97     255.44    
-2024-12-17   252.74    
+2024-12-17   N/A        252.74    
 
 Company: AMT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   232.81     214.95    
 2023-01-05   218.06     214.82    
 2023-01-23   217.26     218.81    
@@ -2405,11 +2405,11 @@ dates        self       other
 2024-10-09   212.91     213.08    
 2024-10-23   193.72     227.23    
 2024-11-06   208.00     212.85    
-2024-12-17   214.45    
+2024-12-17   N/A        214.45    
 
 Company: RTX
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   98.68      97.89     
 2023-01-05   98.71      105.54    
 2023-01-23   100.56     98.03     
@@ -2458,11 +2458,11 @@ dates        self       other
 2024-10-09   122.79     109.48    
 2024-10-23   123.37     107.59    
 2024-11-06   120.61     107.52    
-2024-12-17   115.58    
+2024-12-17   N/A        115.58    
 
 Company: BLK
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   753.99     690.30    
 2023-01-05   747.86     703.91    
 2023-01-23   736.91     733.05    
@@ -2511,11 +2511,11 @@ dates        self       other
 2024-10-09   983.17     1004.03   
 2024-10-23   1036.35    991.70    
 2024-11-06   1026.48    988.08    
-2024-12-17   886.69    
+2024-12-17   N/A        886.69    
 
 Company: AMZN
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   98.12      92.70     
 2023-01-05   100.55     87.65     
 2023-01-23   99.54      98.68     
@@ -2564,11 +2564,11 @@ dates        self       other
 2024-10-09   190.83     198.42    
 2024-10-23   208.91     205.38    
 2024-11-06   207.86     213.06    
-2024-12-17   170.17    
+2024-12-17   N/A        170.17    
 
 Company: PEP
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   175.24     174.05    
 2023-01-05   169.48     191.94    
 2023-01-23   177.77     169.19    
@@ -2617,11 +2617,11 @@ dates        self       other
 2024-10-09   167.50     165.20    
 2024-10-23   164.34     176.66    
 2024-11-06   162.16     168.22    
-2024-12-17   160.71    
+2024-12-17   N/A        160.71    
 
 Company: DOW
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2023-10-26   51.53      51.83     
 2023-11-09   51.75      50.84     
 2023-11-23   54.23      54.02     
@@ -2649,11 +2649,11 @@ dates        self       other
 2024-10-10   49.34      52.00     
 2024-10-24   44.99      53.51     
 2024-11-07   44.64      49.57     
-2024-12-17   47.65     
+2024-12-17   N/A        47.65     
 
 Company: VZ
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   41.86      38.22     
 2023-01-05   41.05      42.60     
 2023-01-23   40.32      42.10     
@@ -2702,11 +2702,11 @@ dates        self       other
 2024-10-09   41.33      43.84     
 2024-10-23   40.40      41.61     
 2024-11-06   44.37      42.82     
-2024-12-17   44.44     
+2024-12-17   N/A        44.44     
 
 Company: DIS
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   99.40      87.19     
 2023-01-05   107.59     93.09     
 2023-01-23   107.66     105.38    
@@ -2755,11 +2755,11 @@ dates        self       other
 2024-10-09   96.13      92.59     
 2024-10-23   100.99     96.32     
 2024-11-06   115.45     97.19     
-2024-12-17   119.03    
+2024-12-17   N/A        119.03    
 
 Company: LIN
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   334.11     325.37    
 2023-01-05   325.03     307.92    
 2023-01-23   334.06     325.70    
@@ -2808,11 +2808,11 @@ dates        self       other
 2024-10-09   474.66     411.32    
 2024-10-23   455.59     410.95    
 2024-11-06   456.60     405.58    
-2024-12-17   411.84    
+2024-12-17   N/A        411.84    
 
 Company: FDX
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   188.63     179.04    
 2023-01-05   184.08     189.32    
 2023-01-23   211.66     185.58    
@@ -2861,11 +2861,11 @@ dates        self       other
 2024-10-09   275.04     279.93    
 2024-10-23   287.27     279.30    
 2024-11-06   302.98     272.44    
-2024-12-17   279.43    
+2024-12-17   N/A        279.43    
 
 Company: HD
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   331.21     329.62    
 2023-01-05   314.24     310.39    
 2023-01-23   323.53     301.46    
@@ -2914,11 +2914,11 @@ dates        self       other
 2024-10-09   395.07     382.86    
 2024-10-23   403.08     355.50    
 2024-11-06   429.52     439.74    
-2024-12-17   357.35    
+2024-12-17   N/A        357.35    
 
 Company: O
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   66.19      65.20     
 2023-01-05   67.77      63.33     
 2023-01-23   67.15      67.90     
@@ -2967,11 +2967,11 @@ dates        self       other
 2024-10-09   60.41      62.89     
 2024-10-23   57.02      64.35     
 2024-11-06   57.75      59.08     
-2024-12-17   54.90     
+2024-12-17   N/A        54.90     
 
 Company: NKE
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   128.85     113.86    
 2023-01-05   126.37     120.04    
 2023-01-23   125.15     125.55    
@@ -3020,11 +3020,11 @@ dates        self       other
 2024-10-09   78.40      84.21     
 2024-10-23   76.66      81.40     
 2024-11-06   77.61      78.02     
-2024-12-17   78.73     
+2024-12-17   N/A        78.73     
 
 Company: CRM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   149.51     128.64    
 2023-01-05   164.75     138.32    
 2023-01-23   171.08     161.23    
@@ -3073,11 +3073,11 @@ dates        self       other
 2024-10-09   298.89     304.50    
 2024-10-23   341.15     290.16    
 2024-11-06   343.18     302.20    
-2024-12-17   277.60    
+2024-12-17   N/A        277.60    
 
 Company: XOM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   113.15     111.00    
 2023-01-05   113.56     112.26    
 2023-01-23   117.80     111.14    
@@ -3126,11 +3126,11 @@ dates        self       other
 2024-10-09   117.28     104.08    
 2024-10-23   120.35     101.83    
 2024-11-06   117.97     102.99    
-2024-12-17   102.10    
+2024-12-17   N/A        102.10    
 
 Company: ECL
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   154.43     148.03    
 2023-01-05   150.46     151.25    
 2023-01-23   147.89     158.22    
@@ -3179,11 +3179,11 @@ dates        self       other
 2024-10-09   253.76     227.04    
 2024-10-23   248.31     231.20    
 2024-11-06   247.38     228.65    
-2024-12-17   234.26    
+2024-12-17   N/A        234.26    
 
 Company: GD
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   240.29     234.32    
 2023-01-05   228.07     232.03    
 2023-01-23   232.88     240.61    
@@ -3232,11 +3232,11 @@ dates        self       other
 2024-10-09   301.75     259.36    
 2024-10-23   312.05     267.29    
 2024-11-06   282.02     270.21    
-2024-12-17   266.57    
+2024-12-17   N/A        266.57    
 
 Company: BAC
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   35.23      33.79     
 2023-01-05   35.30      35.01     
 2023-01-23   35.65      34.46     
@@ -3285,11 +3285,11 @@ dates        self       other
 2024-10-09   42.53      41.68     
 2024-10-23   45.86      43.48     
 2024-11-06   47.75      41.95     
-2024-12-17   41.47     
+2024-12-17   N/A        41.47     
 
 Company: ADM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   88.40      84.63     
 2023-01-05   82.25      85.07     
 2023-01-23   81.90      89.45     
@@ -3338,11 +3338,11 @@ dates        self       other
 2024-10-09   56.32      57.92     
 2024-10-23   51.43      56.85     
 2024-11-06   53.72      54.37     
-2024-12-17   55.57     
+2024-12-17   N/A        55.57     
 
 Company: KMB
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   136.83     138.86    
 2023-01-05   128.99     137.91    
 2023-01-23   130.10     134.21    
@@ -3391,11 +3391,11 @@ dates        self       other
 2024-10-09   134.51     135.91    
 2024-10-23   132.14     132.57    
 2024-11-06   139.73     133.07    
-2024-12-17   139.06    
+2024-12-17   N/A        139.06    
 
 Company: GE
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   64.01      52.77     
 2023-01-05   64.51      57.17     
 2023-01-23   65.99      63.83     
@@ -3444,11 +3444,11 @@ dates        self       other
 2024-10-09   174.05     160.36    
 2024-10-23   182.64     156.81    
 2024-11-06   184.60     192.74    
-2024-12-17   164.85    
+2024-12-17   N/A        164.85    
 
 Company: CHD
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   81.91      80.90     
 2023-01-05   80.59      83.17     
 2023-01-23   83.39      82.64     
@@ -3497,11 +3497,11 @@ dates        self       other
 2024-10-09   100.63     113.11    
 2024-10-23   107.99     106.02    
 2024-11-06   110.38     107.17    
-2024-12-17   97.14     
+2024-12-17   N/A        97.14     
 
 Company: SO
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   70.32      75.75     
 2023-01-05   67.43      73.03     
 2023-01-23   67.13      70.28     
@@ -3550,11 +3550,11 @@ dates        self       other
 2024-10-09   89.82      79.68     
 2024-10-23   87.71      83.02     
 2024-11-06   89.33      83.03     
-2024-12-17   79.42     
+2024-12-17   N/A        79.42     
 
 Company: LMT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   449.83     481.92    
 2023-01-05   460.59     458.23    
 2023-01-23   481.97     455.41    
@@ -3603,11 +3603,11 @@ dates        self       other
 2024-10-09   546.80     520.87    
 2024-10-23   565.96     518.02    
 2024-11-06   521.45     551.45    
-2024-12-17   520.73    
+2024-12-17   N/A        520.73    
 
 Company: BMY
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   72.51      72.07     
 2023-01-05   72.03      73.00     
 2023-01-23   73.17      75.02     
@@ -3656,11 +3656,11 @@ dates        self       other
 2024-10-09   52.50      54.45     
 2024-10-23   59.02      53.80     
 2024-11-06   58.74      55.83     
-2024-12-17   58.48     
+2024-12-17   N/A        58.48     
 
 Company: PLD
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   121.90     121.51    
 2023-01-05   127.79     117.69    
 2023-01-23   129.29     128.23    
@@ -3709,11 +3709,11 @@ dates        self       other
 2024-10-09   115.31     122.71    
 2024-10-23   112.75     121.55    
 2024-11-06   116.17     114.86    
-2024-12-17   120.58    
+2024-12-17   N/A        120.58    
 
 Company: MDT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   80.59      77.53     
 2023-01-05   82.58      80.81     
 2023-01-23   84.39      83.13     
@@ -3762,11 +3762,11 @@ dates        self       other
 2024-10-09   90.32      91.18     
 2024-10-23   88.30      91.39     
 2024-11-06   85.68      89.01     
-2024-12-17   90.37     
+2024-12-17   N/A        90.37     
 
 Company: CVX
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   177.56     182.77    
 2023-01-05   174.20     174.89    
 2023-01-23   171.01     164.69    
@@ -3815,11 +3815,11 @@ dates        self       other
 2024-10-09   148.52     154.31    
 2024-10-23   155.29     155.70    
 2024-11-06   162.53     147.15    
-2024-12-17   167.26    
+2024-12-17   N/A        167.26    
 
 Company: LLY
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   361.62     399.35    
 2023-01-05   340.50     390.76    
 2023-01-23   350.40     372.67    
@@ -3868,11 +3868,11 @@ dates        self       other
 2024-10-09   903.58     795.70    
 2024-10-23   818.86     760.71    
 2024-11-06   789.32     849.40    
-2024-12-17   869.90    
+2024-12-17   N/A        869.90    
 
 Company: SYY
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   80.33      78.38     
 2023-01-05   78.10      80.72     
 2023-01-23   78.23      81.81     
@@ -3921,11 +3921,11 @@ dates        self       other
 2024-10-09   74.17      75.75     
 2024-10-23   77.29      77.65     
 2024-11-06   76.39      76.36     
-2024-12-17   84.78     
+2024-12-17   N/A        84.78     
 
 Company: JPM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   143.01     138.10    
 2023-01-05   139.13     138.93    
 2023-01-23   142.57     141.32    
@@ -3974,11 +3974,11 @@ dates        self       other
 2024-10-09   222.90     211.62    
 2024-10-23   239.56     213.45    
 2024-11-06   249.97     235.85    
-2024-12-17   204.03    
+2024-12-17   N/A        204.03    
 
 Company: TMO
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   583.84     537.47    
 2023-01-05   564.29     694.63    
 2023-01-23   575.00     605.67    
@@ -4027,11 +4027,11 @@ dates        self       other
 2024-10-09   547.77     649.76    
 2024-10-23   540.75     537.69    
 2024-11-06   512.98     578.03    
-2024-12-17   433.60    
+2024-12-17   N/A        433.60    
 
 Company: TGT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   164.60     154.13    
 2023-01-05   168.68     155.66    
 2023-01-23   173.32     172.29    
@@ -4080,11 +4080,11 @@ dates        self       other
 2024-10-09   147.93     156.60    
 2024-10-23   155.65     159.35    
 2024-11-06   126.55     162.93    
-2024-12-17   133.15    
+2024-12-17   N/A        133.15    
 
 Company: CLX
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   146.11     148.09    
 2023-01-05   142.15     145.04    
 2023-01-23   152.89     142.56    
@@ -4133,11 +4133,11 @@ dates        self       other
 2024-10-09   156.83     165.53    
 2024-10-23   164.79     160.71    
 2024-11-06   167.35     162.45    
-2024-12-17   157.71    
+2024-12-17   N/A        157.71    
 
 Company: NOW
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   414.89     428.03    
 2023-01-05   442.57     402.36    
 2023-01-23   461.04     452.49    
@@ -4186,11 +4186,11 @@ dates        self       other
 2024-10-09   953.08     970.61    
 2024-10-23   1048.29    992.00    
 2024-11-06   1070.07    1022.51   
-2024-12-17   835.14    
+2024-12-17   N/A        835.14    
 
 Company: ETR
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   106.56     124.38    
 2023-01-05   107.69     119.96    
 2023-01-23   105.83     114.95    
@@ -4239,11 +4239,11 @@ dates        self       other
 2024-10-09   134.13     122.49    
 2024-10-23   149.23     132.39    
 2024-11-06   155.93     228.47    
-2024-12-17   147.86    
+2024-12-17   N/A        147.86    
 
 Company: DHR
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   242.57     244.05    
 2023-01-05   232.93     243.46    
 2023-01-23   230.39     250.00    
@@ -4292,11 +4292,11 @@ dates        self       other
 2024-10-09   242.69     255.30    
 2024-10-23   239.60     259.45    
 2024-11-06   236.58     256.11    
-2024-12-17   245.37    
+2024-12-17   N/A        245.37    
 
 Company: MRK
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   112.25     110.60    
 2023-01-05   106.09     120.38    
 2023-01-23   109.55     109.29    
@@ -4345,11 +4345,11 @@ dates        self       other
 2024-10-09   103.73     112.84    
 2024-10-23   98.58      107.11    
 2024-11-06   101.62     95.31     
-2024-12-17   106.43    
+2024-12-17   N/A        106.43    
 
 Company: C
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   49.92      44.82     
 2023-01-05   51.75      47.34     
 2023-01-23   51.00      54.56     
@@ -4398,11 +4398,11 @@ dates        self       other
 2024-10-09   64.69      63.15     
 2024-10-23   69.02      65.05     
 2024-11-06   69.75      64.21     
-2024-12-17   68.87     
+2024-12-17   N/A        68.87     
 
 Company: NEM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   54.35      49.32     
 2023-01-05   52.74      55.55     
 2023-01-23   48.30      51.83     
@@ -4451,11 +4451,11 @@ dates        self       other
 2024-10-09   47.80      53.75     
 2024-10-23   41.58      60.74     
 2024-11-06   42.25      54.23     
-2024-12-17   44.28     
+2024-12-17   N/A        44.28     
 
 Company: TXN
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   179.01     160.59    
 2023-01-05   173.13     148.04    
 2023-01-23   176.71     165.58    
@@ -4504,11 +4504,11 @@ dates        self       other
 2024-10-09   211.35     178.01    
 2024-10-23   212.78     192.36    
 2024-11-06   200.95     179.45    
-2024-12-17   168.89    
+2024-12-17   N/A        168.89    
 
 Company: HON
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   216.61     214.18    
 2023-01-05   205.78     218.14    
 2023-01-23   203.37     209.63    
@@ -4557,11 +4557,11 @@ dates        self       other
 2024-10-09   205.98     213.56    
 2024-10-23   233.91     224.37    
 2024-11-06   230.40     190.05    
-2024-12-17   205.47    
+2024-12-17   N/A        205.47    
 
 Company: WMT
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   48.43      48.53     
 2023-01-05   47.38      49.99     
 2023-01-23   48.64      48.64     
@@ -4610,11 +4610,11 @@ dates        self       other
 2024-10-09   81.70      84.61     
 2024-10-23   84.99      83.91     
 2024-11-06   91.31      88.50     
-2024-12-17   78.00     
+2024-12-17   N/A        78.00     
 
 Company: CSCO
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   48.88      49.62     
 2023-01-05   48.22      47.94     
 2023-01-23   47.86      48.47     
@@ -4663,11 +4663,11 @@ dates        self       other
 2024-10-09   55.68      53.68     
 2024-10-23   58.71      57.55     
 2024-11-06   59.59      55.62     
-2024-12-17   57.68     
+2024-12-17   N/A        57.68     
 
 Company: ISRG
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   258.90     269.89    
 2023-01-05   242.23     270.96    
 2023-01-23   245.13     285.89    
@@ -4716,11 +4716,11 @@ dates        self       other
 2024-10-09   516.31     549.70    
 2024-10-23   537.07     486.87    
 2024-11-06   542.10     454.50    
-2024-12-17   442.87    
+2024-12-17   N/A        442.87    
 
 Company: NEE
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   84.68      88.09     
 2023-01-05   75.05      85.92     
 2023-01-23   75.62      88.63     
@@ -4769,11 +4769,11 @@ dates        self       other
 2024-10-09   79.56      74.45     
 2024-10-23   74.26      81.96     
 2024-11-06   77.49      77.52     
-2024-12-17   72.92     
+2024-12-17   N/A        72.92     
 
 Company: ZTS
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   160.92     153.40    
 2023-01-05   164.70     144.58    
 2023-01-23   163.14     169.41    
@@ -4822,11 +4822,11 @@ dates        self       other
 2024-10-09   181.27     197.75    
 2024-10-23   173.96     197.07    
 2024-11-06   175.70     156.48    
-2024-12-17   173.28    
+2024-12-17   N/A        173.28    
 
 Company: APD
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   311.40     288.85    
 2023-01-05   313.90     334.49    
 2023-01-23   286.70     334.71    
@@ -4875,11 +4875,11 @@ dates        self       other
 2024-10-09   315.30     314.79    
 2024-10-23   311.12     287.93    
 2024-11-06   334.78     283.27    
-2024-12-17   282.29    
+2024-12-17   N/A        282.29    
 
 Company: EXC
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   43.38      42.12     
 2023-01-05   41.75      45.52     
 2023-01-23   41.19      45.77     
@@ -4928,11 +4928,11 @@ dates        self       other
 2024-10-09   39.55      37.91     
 2024-10-23   38.16      40.23     
 2024-11-06   39.49      37.77     
-2024-12-17   39.07     
+2024-12-17   N/A        39.07     
 
 Company: QCOM
 Comparison of Actual vs Predicted Prices:
-dates        self       other     
+dates        actual     predicted 
 2022-12-22   120.24     116.44    
 2023-01-05   131.63     117.92    
 2023-01-23   130.84     127.78    
@@ -4981,5 +4981,5 @@ dates        self       other
 2024-10-09   176.00     155.39    
 2024-10-23   163.41     180.95    
 2024-11-06   156.93     152.49    
-2024-12-17   162.57    
+2024-12-17   N/A        162.57    
 

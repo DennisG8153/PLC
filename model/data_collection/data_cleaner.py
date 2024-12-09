@@ -10,7 +10,7 @@ class Normalizer:
         self.volume_scaler = MinMaxScaler() # scales volume (int) column
 
 
-    ###################################################################################
+    ############### --------------------- PRICE --------------------- ###############
     def train_price_column(self, stock_data_column: pd.DataFrame):
         ## trains on 1 price column
         ## DOES NOT TRANSFORM
@@ -34,11 +34,17 @@ class Normalizer:
         return stock_data_column
     
     
-    ###################################################################################
-    def train_and_normalize_volume(self, stock_data: pd.DataFrame):
+    ############### --------------------- VOLUME --------------------- ###############
+    def train_volume(self, stock_data: pd.DataFrame):
         # transforms our singular volume column
         # we do not need to break up fit & transform because volume is already a single column
-        stock_data[["Volume"]] = self.volume_scaler.fit_transform(stock_data[["Volume"]])
+        self.volume_scaler.fit(stock_data[["Volume"]]) 
+    
+    
+    def normalize_volume(self, stock_data: pd.DataFrame):
+        # transforms our singular volume column
+        # we do not need to break up fit & transform because volume is already a single column
+        stock_data[["Volume"]] = self.volume_scaler.transform(stock_data[["Volume"]])
         return stock_data
     
     def restore_volume(self, stock_data: pd.DataFrame):
@@ -47,22 +53,32 @@ class Normalizer:
         return stock_data
     
 
-    ###################################################################################
-    ###################################################################################
-    def normalize_entire_data(self, stock_data: pd.DataFrame):
+    ############### --------------------- ENTIRE DATA --------------------- ###############
+    def train_entire_data(self, stock_data: pd.DataFrame):
         # actually calling above functions
         # loop through all columns and train on each on of them 1 at a time
         # this ensures only one column is transformed at once
         for col_name in ["Open","High","Low","Close"]:
             self.train_price_column(stock_data[[col_name]].values)
+        
+        # volume is only one column so we do not have to loop
+        stock_data = self.train_volume(stock_data)
+        return stock_data
+
+
+    def normalize_entire_data(self, stock_data: pd.DataFrame):
+        # actually calling above functions
+        # loop through all columns and train on each on of them 1 at a time
+        # this ensures only one column is transformed at once
 
         for col_name in ["Open","High","Low","Close"]:
             stock_data[[col_name]] = self.normalize_price_column(stock_data[[col_name]].values)
         
         # volume is only one column so we do not have to loop
-        stock_data = self.train_and_normalize_volume(stock_data)
+        stock_data = self.normalize_volume(stock_data)
         return stock_data
     
+
     def restore_entire_data(self, stock_data: pd.DataFrame):
         # loops through all columns and restores 1 at a time
         for col_name in ["Open","High","Low","Close"]:
@@ -73,12 +89,14 @@ class Normalizer:
         return stock_data
     
 
-    ###################################################################################
+    ############### --------------------- UTILS --------------------- ###############
     def clear_scale(self):
         self.price_scaler = MinMaxScaler()
         self.volume_scaler = MinMaxScaler()
 
-
+###################################################################################
+####                                CLASS END                                  ####
+###################################################################################
 
 def read_data_file(filename: str):
     # reads the data
@@ -107,8 +125,7 @@ def cut_data(data: pd.DataFrame):
 ######################################################################
 # {
 #     ticker: str # ticker of the stock data
-#     test_set: pd.DataFrame # testing set of stock data
-#     train_set: pd.DataFrame # training set of stock data
+#     entire_data: pd.DataFrame # entire set of stock data
 #     normalizer: normalizes data # company specific due to scaling
 # }
 ######################################################################
@@ -121,15 +138,17 @@ from typing import TypedDict
 
 class ReturnCompanyData(TypedDict):
     ticker: str
-    test_set: pd.DataFrame
-    train_set: pd.DataFrame
+    raw_train_set: pd.DataFrame
+    raw_test_set: pd.DataFrame
+    normalized_train_set: pd.DataFrame
+    normalized_test_set: pd.DataFrame
     normalizer: Normalizer
 
 
 ######################################################################
 
 
-def load_all_data_normalized(folder_path: str) -> list[ReturnCompanyData]:
+def load_all_data(folder_path: str) -> list[ReturnCompanyData]:
     datas_to_return = []
     for dirpath, dirnames, filenames in os.walk(folder_path):
         for filename in filenames:
@@ -137,17 +156,21 @@ def load_all_data_normalized(folder_path: str) -> list[ReturnCompanyData]:
             
             # reads the data
             saved_data = read_data_file(os.path.join(dirpath, filename)) 
-            # normalizes data
-            saved_data = data_scaler.normalize_entire_data(saved_data) 
+            data_scaler.train_entire_data(saved_data)
+            normalized_data = data_scaler.train_entire_data(saved_data)
+            
             # cuts our data in 2 (80:20)
-            train_set, test_set = cut_data(saved_data)
+            raw_train_set, raw_test_set = cut_data(saved_data)
+            normalized_train_set, normalized_test_set = cut_data(normalized_data)
 
             # makes returned object
             # dictionary made for each company
             returned_company_data: ReturnCompanyData = {
                 "ticker": filename.split("_")[0], 
-                "test_set": test_set,
-                "train_set": train_set,
+                "raw_train_set": raw_train_set,
+                "raw_test_set": raw_test_set,
+                "normalized_train_set": normalized_train_set,
+                "normalized_test_set": normalized_test_set,
                 "normalizer": data_scaler
             }
 

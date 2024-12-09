@@ -6,9 +6,10 @@ import os
 
 class ModelWork:
 
-    def __init__(self, model_path):
-        self.timestep = 10
-        self.future = 14
+    def __init__(self, model_path, days_to_train_on, prediction_start_date, days_to_predict):
+        self.days_to_train_on = days_to_train_on
+        self.prediction_start_date = prediction_start_date
+        self.days_to_predict = days_to_predict
         self.file_path = model_path
         if os.path.exists(model_path):
             self.model = self.get_model() # self.model is type: "keras model" 
@@ -24,7 +25,7 @@ class ModelWork:
         neural_network = keras.Sequential()
         # neural network = []
         # you take 9 days and predict the 10th (10-1=9)
-        neural_network.add(layers.LSTM(units = 50, return_sequences = True, input_shape = (self.timestep, 5))) 
+        neural_network.add(layers.LSTM(units = 50, return_sequences = True, input_shape = (self.days_to_train_on, 5))) 
         # neural network = [LSTM(10x5)->]
         neural_network.add(layers.LSTM(units = 50))
         # neural network = [LSTM(10x5)->LSTM()->]
