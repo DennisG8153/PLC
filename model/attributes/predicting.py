@@ -27,7 +27,7 @@ def predict_model_test(model_wrapper: ModelWork, data_to_predict: pd.DataFrame):
     additional_data = data_to_predict.iloc[(len(data_to_predict) - model_wrapper.timestep - 1):len(data_to_predict), :].to_numpy()
 
     # Ensure prediction_input_data and additional_data have the correct dimensions
-    prediction_input_data = np.concatenate([prediction_input_data, additional_data]) 
+    prediction_input_data = np.concatenate([prediction_input_data, np.array(additional_data)])
 
     # Reshape to ensure it matches LSTM input shape
     prediction_input_data = prediction_input_data.reshape(-1, model_wrapper.timestep, data_to_predict.shape[1])
