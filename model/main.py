@@ -81,21 +81,21 @@ if __name__ == "__main__":
             # print(f"Company: {company_name}, Test Set Length: {len(dates)}, Predictions Length: {len(correct_prediction)}")
 
             # Restore prices to their original scale
-            restored_prices = pd.DataFrame(correct_prediction)
+            # restored_prices = correct_prediction
             restored_predictions = loaded_data["normalizer"].restore_price_column(predicted_prices.values)
 
             # Debug: print a preview of the restored prices and predictions
-            print(f"Company: {company_name}, Restored Prices: {restored_prices[:5]}, Predictions: {restored_predictions[:5]}")
+            print(f"Company: {company_name}, Restored Prices: {correct_prediction[:5]}, Predictions: {restored_predictions[:5]}")
 
             # Write the comparison table
-            for i in range(0, len(restored_prices), 10):
+            for i in range(0, len(correct_prediction), 10):
                 current_date = dates[i+prediction_start_date]
-                f.write(f"{current_date.strftime('%Y-%m-%d'):<12} {restored_prices[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
+                f.write(f"{current_date.strftime('%Y-%m-%d'):<12} {correct_prediction[i][0]:<10.2} {restored_predictions[i][0]:<10.2f}\n")
 
             # Handle the final date
             current_date = pd.Timestamp.today().date()
             future_date = current_date + timedelta(days = (4*days_to_predict))
             business_date_range = pd.bdate_range(current_date, future_date)
             for i in range(0,days_to_predict):
-                f.write(f"{business_date_range[i].strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions [-(14-i)][0]:<10.2f}\n")
+                f.write(f"{business_date_range[i].strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions [-(days_to_predict-i)][0]:<10.2f}\n")
             f.write("\n")  # Separate companies with a newline for better readability

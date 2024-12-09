@@ -157,10 +157,11 @@ def load_all_data(folder_path: str) -> list[ReturnCompanyData]:
             # reads the data
             saved_data = read_data_file(os.path.join(dirpath, filename)) 
             data_scaler.train_entire_data(saved_data)
-            normalized_data = data_scaler.normalize_entire_data(saved_data)
-            
             # cuts our data in 2 (80:20)
             raw_train_set, raw_test_set = cut_data(saved_data)
+
+            normalized_data = saved_data.copy()
+            data_scaler.normalize_entire_data(normalized_data)
             normalized_train_set, normalized_test_set = cut_data(normalized_data)
 
             # makes returned object
