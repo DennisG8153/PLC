@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
+import ScatterPlot #imports the ScatterPlot script
+
 # Define start and end dates
 start_date = "2015-01-01"
 current_date = date.today().strftime("%Y-%m-%d")
@@ -74,7 +76,7 @@ def parse_data(file_path):
 
 
 
-file_path = "predictedprices.txt"
+file_path = ".\predictedprices.txt"
 
 
 data_dict = parse_data(file_path)
@@ -154,4 +156,4 @@ elif menu == "Stock Predictor":
         else:
             st.warning("Actual vs Predicted data not found for this stock.")
 elif menu == "Sentiment Analysis":
-    st.title("Sentiment Analysis")
+    ScatterPlot.draw()
