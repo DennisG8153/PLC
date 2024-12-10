@@ -50,14 +50,14 @@ if __name__ == "__main__":
     model_path = os.path.join(current_directory, "saved_models", model_file_name)
     loaded_nn = ModelWork(model_path, days_to_train_on, prediction_start_date, days_to_predict)
 
-    ### ----------------------------------------- 3 ----------------------------------------- ###
-    print("checkpoint 3")
-    for loaded_data in all_companies_data: 
-         train_model(loaded_nn, loaded_data["normalized_train_set"])
+    # ### ----------------------------------------- 3 ----------------------------------------- ###
+    # print("checkpoint 3")
+    # for loaded_data in all_companies_data: 
+    #      train_model(loaded_nn, loaded_data["normalized_train_set"])
 
-    ### ----------------------------------------- 4 ----------------------------------------- ###
-    print("checkpoint 4")
-    loaded_nn.save_model()
+    # ### ----------------------------------------- 4 ----------------------------------------- ###
+    # print("checkpoint 4")
+    # loaded_nn.save_model()
 
     ### ----------------------------------------- 5 ----------------------------------------- ###
     print("checkpoint 5")
@@ -68,7 +68,7 @@ if __name__ == "__main__":
             company_name = loaded_data["ticker"]
             f.write(f"Company: {company_name}\n")
             f.write("Comparison of Actual vs Predicted Prices:\n")
-            f.write(f"{'dates':<12} {'actual':<10} {'predicted':<10}\n")  # Clearer column labels
+            f.write(f"{'dates'} {'actual'} {'predicted'}\n")  # Clearer column labels
 
             dates = pd.to_datetime(loaded_data["normalized_test_set"].index)
             # print(f"Company: {company_name}, Dates: {dates[:5]}...")  # Debug: first 5 dates for inspection
@@ -77,11 +77,7 @@ if __name__ == "__main__":
             _, predicted_prices = predict_model_test(loaded_nn, loaded_data["normalized_test_set"])
             _, correct_prediction = lstm_prediction_data(loaded_data["raw_test_set"], days_to_train_on, prediction_start_date, days_to_predict)
 
-            # Debug: check lengths of test set and predictions
-            # print(f"Company: {company_name}, Test Set Length: {len(dates)}, Predictions Length: {len(correct_prediction)}")
-
             # Restore prices to their original scale
-            # restored_prices = correct_prediction
             restored_predictions = loaded_data["normalizer"].restore_price_column(predicted_prices.values)
 
             # Debug: print a preview of the restored prices and predictions
@@ -89,13 +85,13 @@ if __name__ == "__main__":
 
             # Write the comparison table
             for i in range(0, len(correct_prediction), 10):
-                current_date = dates[i+prediction_start_date]
-                f.write(f"{current_date.strftime('%Y-%m-%d'):<12} {correct_prediction[i][0]:<10.2} {restored_predictions[i][0]:<10.2f}\n")
+                current_date = dates[i+prediction_start_date + days_to_train_on]
+                f.write(f"{current_date.strftime('%Y-%m-%d'):<12} {correct_prediction[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
 
             # Handle the final date
             current_date = pd.Timestamp.today().date()
             future_date = current_date + timedelta(days = (4*days_to_predict))
             business_date_range = pd.bdate_range(current_date, future_date)
             for i in range(0,days_to_predict):
-                f.write(f"{business_date_range[i].strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions [-(days_to_predict-i)][0]:<10.2f}\n")
+                f.write(f"{business_date_range[i].strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions[-(days_to_predict-i)][0]:<10.2f}\n")
             f.write("\n")  # Separate companies with a newline for better readability
