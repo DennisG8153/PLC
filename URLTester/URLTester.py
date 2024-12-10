@@ -5,7 +5,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer #Preforms s
 import pandas as pd                                                  #Data manipulation library
 #import streamlit as st                                              #TODO where is streamlit, get this installed
 
-target_url = 'https://blog.marketresearch.com/africas-b2c-e-commerce-sector-is-shifting-towards-digital-payments'
+target_url = 'https://blog.marketresearch.com/topic/emerging-markets'
 #headers={"accept-language":"en-US,en;q=0.9", "accept-encoding":"gzip, deflate, br", "accept-charset":"utf-8", "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"}
 headers={"accept-language": "en-US,en;q=0.9", "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"}
 response = requests.get(target_url, verify=True, headers=headers) 
