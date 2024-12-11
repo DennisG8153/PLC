@@ -24,6 +24,14 @@ def draw():
 
     #Page Title
     st.title("Sentiment Analysis")
+
+    #Table of Useful Values
+    sent_vals = [['', 'Positive', 'Negative'],
+                 ['Mean', avg_pos, avg_neg],
+                 ['Standard Deviation', stdev_pos, stdev_neg]]
+    plt.table(cellText=sent_vals, loc='center',)
+    plt.show()
+
     #Scatter Plot:
     #Size
     plt.figure(figsize=(11, 7))

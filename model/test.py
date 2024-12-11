@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-import ScatterPlot #imports the ScatterPlot script
+import model.SentimentGraphs as SentimentGraphs #imports the ScatterPlot script
 
 # Define start and end dates
 start_date = "2015-01-01"
@@ -156,4 +156,4 @@ elif menu == "Stock Predictor":
         else:
             st.warning("Actual vs Predicted data not found for this stock.")
 elif menu == "Sentiment Analysis":
-    ScatterPlot.draw()
+    SentimentGraphs.draw()
