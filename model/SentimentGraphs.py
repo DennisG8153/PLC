@@ -25,13 +25,6 @@ def draw():
     #Page Title
     st.title("Sentiment Analysis")
 
-    #Table of Useful Values
-    sent_vals = [['', 'Positive', 'Negative'],
-                 ['Mean', avg_pos, avg_neg],
-                 ['Standard Deviation', stdev_pos, stdev_neg]]
-    plt.table(cellText=sent_vals, loc='center',)
-    plt.show()
-
     #Scatter Plot:
     #Size
     plt.figure(figsize=(11, 7))
@@ -47,14 +40,18 @@ def draw():
     #Draw Scatter Plot
     st.pyplot(plt)
 
-    #TODO: TABLE OF IMPORTANT VALUES
+    #TODO:Table of Useful Values
+    sent_vals = [['', 'Positive', 'Negative'],
+                 ['Mean', round(avg_pos, 4), round(avg_neg, 4)],
+                 ['Standard Deviation', round(stdev_pos, 4), round(stdev_neg, 4)]]
+    st.dataframe(sent_vals, hide_index=True)
 
     #Positive Histogram:
     plt.figure(figsize=(11, 7))
     plt.title('Positive Sentiment Distribution')
     plt.xlabel('Positive Sentiment Score')
     plt.ylabel('Frequency')
-    plt.xlim(total_sent['pos'].min() - 0.01, total_sent['pos'].max() + 0.01)
+    plt.xlim(total_sent['pos'].min(), total_sent['pos'].max())
     n, bins, patches = plt.hist(total_sent['pos'].tolist(), bins=num_bins)
     plt.plot(bins, normal_curve(bins, avg_pos, stdev_pos), '--', color='black')
     st.pyplot(plt)
@@ -64,7 +61,7 @@ def draw():
     plt.title('Negative Sentiment Distribution')
     plt.xlabel('Negative Sentiment Score')
     plt.ylabel('Frequency')
-    plt.xlim(total_sent['neg'].min() - 0.01, total_sent['neg'].max() + 0.01)
+    plt.xlim(total_sent['neg'].min(), total_sent['neg'].max())
     n, bins, patches = plt.hist(total_sent['neg'].tolist(), bins=num_bins)
     plt.plot(bins, normal_curve(bins, avg_neg, stdev_neg), '--', color='black')
     st.pyplot(plt)
