@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-import model.SentimentGraphs as SentimentGraphs #imports the ScatterPlot script
+import SentimentGraphs #imports the SentimentGraphs script
 
 # Define start and end dates
 start_date = "2015-01-01"
