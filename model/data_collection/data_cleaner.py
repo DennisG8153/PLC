@@ -57,7 +57,7 @@ class Normalizer:
     def train_entire_data(self, stock_data: pd.DataFrame):
         # actually calling above functions
         # loop through all columns and train on each on of them 1 at a time
-        # this ensures only one column is transformed at once
+        # this ensures only one column will be transformed at once
         for col_name in ["Open","High","Low","Close"]:
             self.train_price_column(stock_data[[col_name]].values)
         
@@ -68,7 +68,7 @@ class Normalizer:
 
     def normalize_entire_data(self, stock_data: pd.DataFrame):
         # actually calling above functions
-        # loop through all columns and train on each on of them 1 at a time
+        # loop through all columns and normalizes 1 at a time
         # this ensures only one column is transformed at once
 
         for col_name in ["Open","High","Low","Close"]:
@@ -98,27 +98,28 @@ class Normalizer:
 ####                                CLASS END                                  ####
 ###################################################################################
 
+
 def read_data_file(filename: str):
     # reads the data
     data_read_from_file = pd.read_csv(
         filename,
-        index_col=0,
-        parse_dates=True,
-        date_format='%Y-%m-%d'
+        index_col = 0, # use the first column as the index
+        parse_dates = True,  # automatically parse dates in the index
+        date_format='%Y-%m-%d' #date format parsing
     )
-    data_read_from_file.dropna(inplace=True)
-    return data_read_from_file
+    data_read_from_file.dropna(inplace=True) # drops null values
+    return data_read_from_file 
 
 
 def write_data_file(filename: str, old_data_to_write: pd.DataFrame):
-    # save updated data to the file in the specified folder
+    # write updated data to csv file 
     old_data_to_write.to_csv(filename)
 
 
 def cut_data(data: pd.DataFrame):
     training_size = round(len(data) * 0.80)
-    train_data = data[:training_size]
-    test_data  = data[training_size:]
+    train_data = data[:training_size] # first 80% for training
+    test_data  = data[training_size:] # # remaining 20% for testing
     return train_data, test_data 
 
 

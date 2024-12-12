@@ -24,10 +24,9 @@ class ModelWork:
 
         neural_network = keras.Sequential()
         # neural network = []
-        # you take 9 days and predict the 10th (10-1=9)
         neural_network.add(layers.LSTM(units = 50, return_sequences = True, input_shape = (self.days_to_train_on, 5))) 
         # neural network = [LSTM(10x5)->]
-        neural_network.add(layers.LSTM(units = 50))
+        neural_network.add(layers.LSTM(units = 50, return_sequences = True))
         # neural network = [LSTM(10x5)->LSTM()->]
         neural_network.add(layers.Dense(units = 1))
         # neural network = [LSTM(10x5)->LSTM()->Dense()]

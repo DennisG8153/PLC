@@ -68,30 +68,37 @@ if __name__ == "__main__":
             company_name = loaded_data["ticker"]
             f.write(f"Company: {company_name}\n")
             f.write("Comparison of Actual vs Predicted Prices:\n")
-            f.write(f"{'dates'} {'actual'} {'predicted'}\n")  # Clearer column labels
+            f.write(f"{'dates'} {'actual'} {'predicted'}\n")  # clearer column labels
 
             dates = pd.to_datetime(loaded_data["normalized_test_set"].index)
-            # print(f"Company: {company_name}, Dates: {dates[:5]}...")  # Debug: first 5 dates for inspection
 
-            # Make predictions
+            # make predictions
             _, predicted_prices = predict_model_test(loaded_nn, loaded_data["normalized_test_set"])
             _, correct_prediction = lstm_prediction_data(loaded_data["raw_test_set"], days_to_train_on, prediction_start_date, days_to_predict)
 
-            # Restore prices to their original scale
+            # print(predicted_prices)
+            # restore prices to their original scale
             restored_predictions = loaded_data["normalizer"].restore_price_column(predicted_prices.values)
 
-            # Debug: print a preview of the restored prices and predictions
+            # debug: print a preview of the restored prices and predictions
             print(f"Company: {company_name}, Restored Prices: {correct_prediction[:5]}, Predictions: {restored_predictions[:5]}")
 
-            # Write the comparison table
+            # write the comparison table
             for i in range(0, len(correct_prediction), 10):
                 current_date = dates[i+prediction_start_date + days_to_train_on]
                 f.write(f"{current_date.strftime('%Y-%m-%d'):<12} {correct_prediction[i][0]:<10.2f} {restored_predictions[i][0]:<10.2f}\n")
 
-            # Handle the final date
+            # handle the final date
             current_date = pd.Timestamp.today().date()
             future_date = current_date + timedelta(days = (4*days_to_predict))
             business_date_range = pd.bdate_range(current_date, future_date)
             for i in range(0,days_to_predict):
                 f.write(f"{business_date_range[i].strftime('%Y-%m-%d'):<12} {'N/A':<10} {restored_predictions[-(days_to_predict-i)][0]:<10.2f}\n")
-            f.write("\n")  # Separate companies with a newline for better readability
+            f.write("\n")  # separate companies with a newline for better readability
+
+            # difference_of_df = correct_prediction - restored_predictions
+            # variance = difference_of_df.var()
+            # print(difference_of_df)
+            # print(correct_prediction)
+            # print("CUTOFF")
+            # print(restored_predictions)
