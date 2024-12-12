@@ -26,7 +26,7 @@ class ModelWork:
         # neural network = []
         neural_network.add(layers.LSTM(units = 50, return_sequences = True, input_shape = (self.days_to_train_on, 5))) 
         # neural network = [LSTM(10x5)->]
-        neural_network.add(layers.LSTM(units = 50, return_sequences = True))
+        neural_network.add(layers.LSTM(units = 50))
         # neural network = [LSTM(10x5)->LSTM()->]
         neural_network.add(layers.Dense(units = 1))
         # neural network = [LSTM(10x5)->LSTM()->Dense()]
