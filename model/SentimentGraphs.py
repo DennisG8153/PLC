@@ -40,12 +40,6 @@ def draw():
     #Draw Scatter Plot
     st.pyplot(plt)
 
-    #TODO:Table of Useful Values
-    sent_vals = [['', 'Positive', 'Negative'],
-                 ['Mean', round(avg_pos, 4), round(avg_neg, 4)],
-                 ['Standard Deviation', round(stdev_pos, 4), round(stdev_neg, 4)]]
-    st.dataframe(sent_vals, hide_index=True)
-
     #Positive Histogram:
     plt.figure(figsize=(11, 7))
     plt.title('Positive Sentiment Distribution')
@@ -65,3 +59,9 @@ def draw():
     n, bins, patches = plt.hist(total_sent['neg'].tolist(), bins=num_bins)
     plt.plot(bins, normal_curve(bins, avg_neg, stdev_neg), '--', color='black')
     st.pyplot(plt)
+
+    #TODO:Table of Useful Values
+    sent_vals = [['', 'Positive', 'Negative'],
+                 ['Mean', round(avg_pos, 4), round(avg_neg, 4)],
+                 ['Standard Deviation', round(stdev_pos, 4), round(stdev_neg, 4)]]
+    st.dataframe(sent_vals, hide_index=True)
